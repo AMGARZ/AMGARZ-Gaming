@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AMGARZ Gaming - Games</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+    font-family:Arial,sans-serif;
+    background:#0b0f14;
+    color:white;
+}
+header{
+    text-align:center;
+    padding:25px 15px;
+    background:#111820;
+}
+header h1{color:#00ff88;margin-bottom:15px}
+#search{
+    width:90%;
+    max-width:500px;
+    padding:14px;
+    border:0;
+    border-radius:10px;
+    font-size:16px;
+}
+.categories{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    padding:20px;
+    justify-content:center;
+}
+.categories button{
+    padding:10px 18px;
+    border:0;
+    border-radius:20px;
+    background:#1c2630;
+    color:white;
+    white-space:nowrap;
+}
+.categories button:hover{background:#00c853}
+.games-container{
+    width:95%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+    padding:20px 0 40px;
+}
+.game{
+    background:#151d25;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.35);
+}
+.game h2{margin-bottom:10px}
+.game p{
+    color:#b8c0c8;
+    margin-bottom:15px;
+}
+.install{
+    display:inline-block;
+    padding:11px 20px;
+    border-radius:8px;
+    background:#00c853;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+.install:hover{background:#00a844}
+.back{
+    display:block;
+    width:max-content;
+    margin:0 auto 30px;
+    color:#00ff88;
+    text-decoration:none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎮 AMGARZ GAMING</h1>
+
+<input
+id="search"
+type="text"
+placeholder="🔎 Search games..."
+onkeyup="searchGames()">
+</header>
+
+<div class="categories">
+<button onclick="filterGames('all')">🎮 All</button>
+<button onclick="filterGames('racing')">🏎️ Racing</button>
+<button onclick="filterGames('casual')">🎯 Casual</button>
+<button onclick="filterGames('action')">⚔️ Action</button>
+<button onclick="filterGames('adventure')">🗺️ Adventure</button>
+</div>
+
+<div class="games-container">
+
+<div class="game" data-category="casual">
+<h2>🚇 Subway Surfers</h2>
+<p>Endless runner game.</p>
+<a class="install"
+href="https://play.google.com/store/apps/details?id=com.kiloo.subwaysurf"
+target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="casual">
+<h2>🍬 Candy Crush Saga</h2>
+<p>Match-3 puzzle game.</p>
+<a class="install"
+href="https://play.google.com/store/apps/details?id=com.king.candycrushsaga"
+target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="casual">
+<h2>🧱 Roblox</h2>
+<p>Online gaming platform.</p>
+<a class="install"
+href="https://play.google.com/store/apps/details?id=com.roblox.client"
+target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="adventure">
+<h2>🏃 Temple Run 2</h2>
+<p>Endless running adventure.</p>
+<a class="install"
+href="https://play.google.com/store/apps/details?id=com.imangi.templerun2"
+target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+<h2>🚗 Hill Climb Racing</h2>
+<p>Physics-based driving game.</p>
+<a class="install"
+href="https://play.google.com/store/apps/details?id=com.fingersoft.hillclimb"
+target="_blank">📲
+<!-- CAR / RACING GAMES -->
+
+<div class="game" data-category="racing">
+    <h2>🏎️ Asphalt 9</h2>
+    <p>High-speed arcade racing.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Asphalt%209&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🚗 CarX Street</h2>
+    <p>Open-world street racing.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=CarX%20Street&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🏁 Real Racing 3</h2>
+    <p>Realistic racing experience.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Real%20Racing%203&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🚘 Need for Speed</h2>
+    <p>Street racing and car customization.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Need%20for%20Speed&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🏎️ Car Parking Multiplayer</h2>
+    <p>Open-world driving and parking.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Car%20Parking%20Multiplayer&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🚙 Driving School Simulator</h2>
+    <p>Driving and car simulation.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Driving%20School%20Simulator&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🏁 CSR Racing 2</h2>
+    <p>Drag racing and car customization.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=CSR%20Racing%202&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🚗 Beach Buggy Racing 2</h2>
+    <p>Fun kart-style racing.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Beach%20Buggy%20Racing%202&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🏎️ F1 Mobile Racing</h2>
+    <p>Formula racing experience.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=F1%20Mobile%20Racing&c=apps"
+       target="_blank">📲 Install</a>
+</div>
+
+<div class="game" data-category="racing">
+    <h2>🚘 Rebel Racing</h2>
+    <p>Fast-paced car racing.</p>
+    <a class="install"
+       href="https://play.google.com/store/search?q=Rebel%20Racing&c=apps"
+       target="_blank

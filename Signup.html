@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signup - AMGARZ Gaming</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMGARZ Gaming - Signup</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="login-box">
+<div class="auth-box">
+    <h1>🎮 AMGARZ GAMING</h1>
     <h2>Create Account</h2>
 
-    <input type="text" id="newUser" placeholder="Username">
+    <input type="text" id="signupName" placeholder="Enter Username">
+    <input type="email" id="signupEmail" placeholder="Enter Email">
+    <input type="password" id="signupPassword" placeholder="Enter Password">
 
-    <input type="password" id="newPass" placeholder="Password">
+    <button onclick="signup()">SIGN UP</button>
 
-    <button onclick="signup()">Create Account</button>
+    <p>Already have an account?</p>
+    <a href="login.html">Login</a>
 
     <p id="signupMessage"></p>
 </div>
 
-<script src="script.js"></script>
+<script>
+function signup() {
+    let name = document.getElementById("signupName").value;
+    let email = document.getElementById("signupEmail").value;
+    let password = document.getElementById("signupPassword").value;
+    let message = document.getElementById("signupMessage");
+
+    if (!name || !email || !password) {
+        message.innerText = "Please fill all fields!";
+        return;
+    }
+
+    localStorage.setItem("username", name);
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+
+    message.innerText = "Signup successful! 🎉";
+
+    setTimeout(function() {
+        window.location.href = "login.html";
+    }, 1000);
+}
+</script>
 
 </body>
 </html>
-<

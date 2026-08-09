@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -114,8 +114,7 @@
 
 <body>
 
-<header>
-    <h1>🎮 AMGARZ GAMING</h1>
+
 
     <input
         type="text"
@@ -124,104 +123,210 @@
         placeholder="Search games..."
         onkeyup="searchGames()"
     >
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0f14;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 25px 15px;
+    background: #111820;
+}
+
+header h1 {
+    color: #00ff88;
+    margin-bottom: 15px;
+}
+
+#search {
+    width: 90%;
+    max-width: 500px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.categories {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.categories button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 20px;
+    background: #1c2630;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.categories button:hover {
+    background: #00c853;
+}
+
+.games-container {
+    width: 95%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+    padding: 20px 0 40px;
+}
+
+.game {
+    background: #151d25;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,.35);
+}
+
+.game h2 {
+    margin-bottom: 10px;
+}
+
+.game p {
+    color: #b8c0c8;
+    margin-bottom: 15px;
+}
+
+.download {
+    display: inline-block;
+    padding: 11px 20px;
+    border-radius: 8px;
+    background: #00c853;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.download:hover {
+    background: #00a844;
+}
+
+.back {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 30px;
+    color: #00ff88;
+    text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎮 AMGARZ GAMING</h1>
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔎 Search games..."
+        onkeyup="searchGames()"
+    >
 </header>
 
 <div class="categories">
-    <button onclick="filterGames('all')">All</button>
-    <button onclick="filterGames('racing')">🚗 Racing</button>
-    <button onclick="filterGames('shooting')">🔫 Shooting</button>
+    <button onclick="filterGames('all')">🎮 All</button>
+    <button onclick="filterGames('horror')">👻 Horror</button>
+    <button onclick="filterGames('racing')">🏎️ Racing</button>
     <button onclick="filterGames('action')">⚔️ Action</button>
-    <button onclick="filterGames('adventure')">🗺️ Adventure</button>
-    <button onclick="filterGames('sports')">⚽ Sports</button>
     <button onclick="filterGames('casual')">🎯 Casual</button>
+    <button onclick="filterGames('shooting')">🔫 Shooting</button>
+    <button onclick="filterGames('adventure')">🗺️ Adventure</button>
 </div>
 
 <div class="games-container">
 
-    <!-- RACING -->
-    <div class="game" data-category="racing">
-        <h2>🏎️ Asphalt Legends</h2>
-        <p>High-speed arcade racing.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Asphalt%20Legends&c=apps"
-           target="_blank">
-           Download
-        </a>
+    <div class="game" data-category="horror">
+        <h2>👻 KAMLA</h2>
+        <p>Horror survival game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
     </div>
 
-    <div class="game" data-category="racing">
-        <h2>🚗 CarX Street</h2>
-        <p>Open-world street racing.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=CarX%20Street&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <!-- SHOOTING -->
-    <div class="game" data-category="shooting">
-        <h2>🔫 Free Fire</h2>
-        <p>Fast-paced battle royale.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Free%20Fire&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <div class="game" data-category="shooting">
-        <h2>🎯 Call of Duty</h2>
-        <p>Multiplayer FPS action.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Call%20of%20Duty%20Mobile&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <!-- ACTION -->
-    <div class="game" data-category="action">
-        <h2>⚔️ Shadow Fight</h2>
-        <p>Action fighting adventure.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Shadow%20Fight&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <!-- ADVENTURE -->
-    <div class="game" data-category="adventure">
-        <h2>🗺️ Roblox</h2>
-        <p>Explore millions of experiences.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Roblox&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <!-- SPORTS -->
-    <div class="game" data-category="sports">
-        <h2>⚽ eFootball</h2>
-        <p>Football gaming experience.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=eFootball&c=apps"
-           target="_blank">
-           Download
-        </a>
-    </div>
-
-    <!-- CASUAL -->
     <div class="game" data-category="casual">
-        <h2>🧩 Among Us</h2>
-        <p>Social multiplayer game.</p>
-        <a class="download"
-           href="https://play.google.com/store/search?q=Among%20Us&c=apps"
-           target="_blank">
-           Download
-        </a>
+        <h2>👑 Subway Princess Runner</h2>
+        <p>Endless running adventure.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="racing">
+        <h2>🏍️ Indian Bikes Driving 3D</h2>
+        <p>Bike and vehicle driving game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="casual">
+        <h2>🍬 Candy Crush Saga</h2>
+        <p>Classic match-3 puzzle game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="casual">
+        <h2>🚇 Subway Surfers</h2>
+        <p>Fast-paced endless runner.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="shooting">
+        <h2>🔫 BGMI: FPS Battle Royale</h2>
+        <p>Battle royale shooter.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="adventure">
+        <h2>🏃 Temple Run 2</h2>
+        <p>Endless running adventure.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="casual">
+        <h2>🐱 My Talking Tom</h2>
+        <p>Virtual pet game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="casual">
+        <h2>🛒 My Supermarket Simulator 3D</h2>
+        <p>Supermarket simulation game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="racing">
+        <h2>🚗 Hill Climb Racing</h2>
+        <p>Physics-based driving game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
+    </div>
+
+    <div class="game" data-category="action">
+        <h2>🗡️ Hunter Assassin</h2>
+        <p>Stealth action game.</p>
+        <a class="download" href="YOUR_FILE_HERE" download>⬇️ Download</a>
     </div>
 
 </div>
@@ -230,17 +335,18 @@
 
 <script>
 function searchGames() {
-    let input = document.getElementById("search").value.toLowerCase();
+    let input = document
+        .getElementById("search")
+        .value
+        .toLowerCase();
+
     let games = document.querySelectorAll(".game");
 
     games.forEach(function(game) {
         let name = game.innerText.toLowerCase();
 
-        if (name.includes(input)) {
-            game.style.display = "block";
-        } else {
-            game.style.display = "none";
-        }
+        game.style.display =
+            name.includes(input) ? "block" : "none";
     });
 }
 
@@ -248,7 +354,10 @@ function filterGames(category) {
     let games = document.querySelectorAll(".game");
 
     games.forEach(function(game) {
-        if (category === "all" || game.dataset.category === category) {
+        if (
+            category === "all" ||
+            game.dataset.category === category
+        ) {
             game.style.display = "block";
         } else {
             game.style.display = "none";
@@ -259,6 +368,3 @@ function filterGames(category) {
 
 </body>
 </html>
-<a class="download" href="games/mygame.apk" download>
-    ⬇️ Download
-</a>
